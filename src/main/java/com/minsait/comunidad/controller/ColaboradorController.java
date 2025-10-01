@@ -20,19 +20,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 @RequestMapping("/api/colaboradores")
 public class ColaboradorController {
-    
-    
+        
     private ColaboradorServices colaboradorServices;
     
     public ColaboradorController(ColaboradorServices colaboradorServices) {
         this.colaboradorServices = colaboradorServices;
     }
-
-    @GetMapping
-    public ResponseEntity<?> list() {
-        return ResponseEntity.ok(colaboradorServices.findAllColaborador());
-    }
-
     @PostMapping
     public ResponseEntity<ColaboradorDto> save(@RequestBody ColaboradorDto colaboradorDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(colaboradorServices.saveColaborador(colaboradorDto));
@@ -48,11 +41,7 @@ public class ColaboradorController {
         return ResponseEntity.notFound().build();
         
     }
-    @DeleteMapping("/{codigo}")
-    public ResponseEntity<?> delete(@PathVariable String codigo) {  
-        
-     return ResponseEntity.notFound().build();
-    }
+    
   
 
 }

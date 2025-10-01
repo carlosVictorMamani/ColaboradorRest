@@ -12,9 +12,9 @@ public interface ColaboradorServices {
     ColaboradorDto updateColaborador(ColaboradorDto colaboradorReq , Colaborador colaboradorDto);
     ColaboradorDto saveColaborador(ColaboradorDto colaboradorDto);
    Optional<Colaborador> findByCodigo(String codigo);
+    void deleteColaborador(String codigo);
 
 /*
-
     Optional<ColaboradorDto> findBySolicitante(String solicitante);
     
     ColaboradorDto update(ColaboradorDto ticket , ColaboradorDto elemntoTicket);

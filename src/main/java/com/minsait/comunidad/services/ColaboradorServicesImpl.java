@@ -27,12 +27,7 @@ public class ColaboradorServicesImpl implements ColaboradorServices {
     public Optional<Colaborador> findByCodigo(String codigo) {
         return repository.findByCodigo(codigo);
     }*/
-
-    @Override
-    @Transactional(readOnly = true)
-    public List<ColaboradorDto> findAllColaborador() {
-       return mapper.toListDto(repository.findAll());
-    }
+    
 
     @Override
     @Transactional
@@ -60,6 +55,17 @@ public class ColaboradorServicesImpl implements ColaboradorServices {
     @Override
     public Optional<Colaborador> findByCodigo(String codigo) {
         return repository.findById(new ObjectId(codigo));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<ColaboradorDto> findAllColaborador() {
+        return mapper.toListDto(repository.findAll());
+    }
+
+    @Override
+    public void deleteColaborador(String codigo) {
+            this.repository.deleteById(new ObjectId(codigo));
     }
 
  
