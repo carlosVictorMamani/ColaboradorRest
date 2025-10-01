@@ -57,15 +57,7 @@ public class ColaboradorServicesImpl implements ColaboradorServices {
         return repository.findById(new ObjectId(codigo));
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public List<ColaboradorDto> findAllColaborador() {
-        return mapper.toListDto(repository.findAll());
-    }
-
-    @Override
-    public void deleteColaborador(String codigo) {
-            this.repository.deleteById(new ObjectId(codigo));
+    
     }
 
  
