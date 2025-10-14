@@ -12,6 +12,7 @@ import org.bson.types.ObjectId;
 public interface ColaboradorRepository extends MongoRepository<Colaborador, ObjectId> {
 
     Optional<Colaborador> findById(ObjectId id);
+    
 
     /* Optional<Ticket> findBySolicitante(String solicitante);
 
