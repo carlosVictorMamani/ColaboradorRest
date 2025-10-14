@@ -13,6 +13,7 @@ public interface ColaboradorRepository extends MongoRepository<Colaborador, Obje
 
     Optional<Colaborador> findById(ObjectId id);
 
+    /* prueba */
     /* Optional<Ticket> findBySolicitante(String solicitante);
 
     long countByFechaCreacion(Date fechaCreacion); */
