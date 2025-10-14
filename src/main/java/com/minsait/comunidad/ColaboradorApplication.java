@@ -1,4 +1,4 @@
-package com.minsait.comunidad.colaborador;
+package com.minsait.comunidad;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
