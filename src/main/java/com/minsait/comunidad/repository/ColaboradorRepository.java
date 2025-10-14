@@ -12,8 +12,8 @@ import org.bson.types.ObjectId;
 public interface ColaboradorRepository extends MongoRepository<Colaborador, ObjectId> {
 
     Optional<Colaborador> findById(ObjectId id);
-    
 
+    /* prueba */
     /* Optional<Ticket> findBySolicitante(String solicitante);
 
     long countByFechaCreacion(Date fechaCreacion); */
